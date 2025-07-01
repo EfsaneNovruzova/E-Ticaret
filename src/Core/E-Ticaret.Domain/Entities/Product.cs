@@ -15,4 +15,6 @@ public  class Product:BaseEntity
     public ICollection<Favourite> Favourites { get; set; }
 
     public ICollection<OrderProduct> OrderProducts { get; set; }
+    public ICollection<Review> Reviews { get; set; }
+
 }
