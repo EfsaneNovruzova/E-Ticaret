@@ -7,4 +7,13 @@
     <RootNamespace>E_Ticaret.WebApi</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\E-Ticaret.Infrastructure\E-Ticaret.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\E-Ticaret.Persistence\E-Ticaret.Persistence.csproj" />
+  </ItemGroup>
+
 </Project>

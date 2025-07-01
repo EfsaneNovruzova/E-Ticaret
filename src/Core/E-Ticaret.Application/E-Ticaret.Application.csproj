@@ -7,4 +7,15 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Abstracts\" />
+    <Folder Include="DTOs\" />
+    <Folder Include="Validations\" />
+    <Folder Include="Shared\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\E-Ticaret.Domain\E-Ticaret.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
