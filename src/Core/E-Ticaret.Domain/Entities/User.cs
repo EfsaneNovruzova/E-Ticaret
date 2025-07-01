@@ -8,4 +8,6 @@ public class User:BaseEntity
     public ICollection<Favourite> Favourites { get; set; }
 
     public ICollection<Order> Orders { get; set; }
+    public ICollection<Notification> Notifications { get; set; }
+    public ICollection<Review> Reviews { get; set; }
 }
