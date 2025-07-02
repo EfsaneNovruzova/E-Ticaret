@@ -2,7 +2,7 @@
 
 namespace E_Ticaret.Domain.Entities;
 
-public  class Product:BaseEntity
+public class Product : BaseEntity
 {
     public string Name { get; set; } = null!;
     public Guid UserId { get; set; }

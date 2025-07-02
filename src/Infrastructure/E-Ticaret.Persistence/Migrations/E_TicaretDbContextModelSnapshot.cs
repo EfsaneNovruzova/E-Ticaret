@@ -23,483 +23,483 @@ namespace E_Ticaret.Persistence.Migrations
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
             modelBuilder.Entity("E_Ticaret.Domain.Entities.Category", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+            {
+                b.Property<Guid>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime?>("CreatedAt")
-                        .HasColumnType("datetime2");
+                b.Property<DateTime?>("CreatedAt")
+                    .HasColumnType("datetime2");
 
-                    b.Property<Guid?>("CreatedUser")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid?>("CreatedUser")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                b.Property<string>("Name")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(450)");
 
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("datetime2");
+                b.Property<DateTime?>("UpdatedAt")
+                    .HasColumnType("datetime2");
 
-                    b.Property<Guid?>("UpdatedUser")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid?>("UpdatedUser")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("Id");
+                b.HasKey("Id");
 
-                    b.HasIndex("Name")
-                        .IsUnique();
+                b.HasIndex("Name")
+                    .IsUnique();
 
-                    b.ToTable("Categories");
-                });
+                b.ToTable("Categories");
+            });
 
             modelBuilder.Entity("E_Ticaret.Domain.Entities.Favorite", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+            {
+                b.Property<Guid>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime?>("CreatedAt")
-                        .HasColumnType("datetime2");
+                b.Property<DateTime?>("CreatedAt")
+                    .HasColumnType("datetime2");
 
-                    b.Property<Guid?>("CreatedUser")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid?>("CreatedUser")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("ProductId")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid>("ProductId")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("datetime2");
+                b.Property<DateTime?>("UpdatedAt")
+                    .HasColumnType("datetime2");
 
-                    b.Property<Guid?>("UpdatedUser")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid?>("UpdatedUser")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid>("UserId")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("Id");
+                b.HasKey("Id");
 
-                    b.HasIndex("ProductId");
+                b.HasIndex("ProductId");
 
-                    b.HasIndex("UserId");
+                b.HasIndex("UserId");
 
-                    b.ToTable("Favorites");
-                });
+                b.ToTable("Favorites");
+            });
 
             modelBuilder.Entity("E_Ticaret.Domain.Entities.Image", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+            {
+                b.Property<Guid>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime?>("CreatedAt")
-                        .HasColumnType("datetime2");
+                b.Property<DateTime?>("CreatedAt")
+                    .HasColumnType("datetime2");
 
-                    b.Property<Guid?>("CreatedUser")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid?>("CreatedUser")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("ImageUrl")
-                        .IsRequired()
-                        .HasMaxLength(300)
-                        .HasColumnType("nvarchar(300)");
+                b.Property<string>("ImageUrl")
+                    .IsRequired()
+                    .HasMaxLength(300)
+                    .HasColumnType("nvarchar(300)");
 
-                    b.Property<bool>("IsMain")
-                        .HasColumnType("bit");
+                b.Property<bool>("IsMain")
+                    .HasColumnType("bit");
 
-                    b.Property<Guid>("ProductId")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid>("ProductId")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("datetime2");
+                b.Property<DateTime?>("UpdatedAt")
+                    .HasColumnType("datetime2");
 
-                    b.Property<Guid?>("UpdatedUser")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid?>("UpdatedUser")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("Id");
+                b.HasKey("Id");
 
-                    b.HasIndex("ProductId");
+                b.HasIndex("ProductId");
 
-                    b.ToTable("Images");
-                });
+                b.ToTable("Images");
+            });
 
             modelBuilder.Entity("E_Ticaret.Domain.Entities.Notification", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+            {
+                b.Property<Guid>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime?>("CreatedAt")
-                        .HasColumnType("datetime2");
+                b.Property<DateTime?>("CreatedAt")
+                    .HasColumnType("datetime2");
 
-                    b.Property<Guid?>("CreatedUser")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid?>("CreatedUser")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("FavoriteId")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid?>("FavoriteId")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<bool>("IsRead")
-                        .HasColumnType("bit");
+                b.Property<bool>("IsRead")
+                    .HasColumnType("bit");
 
-                    b.Property<string>("Message")
-                        .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                b.Property<string>("Message")
+                    .IsRequired()
+                    .HasMaxLength(500)
+                    .HasColumnType("nvarchar(500)");
 
-                    b.Property<Guid?>("OrderId")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid?>("OrderId")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("ProductId")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid?>("ProductId")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("datetime2");
+                b.Property<DateTime?>("UpdatedAt")
+                    .HasColumnType("datetime2");
 
-                    b.Property<Guid?>("UpdatedUser")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid?>("UpdatedUser")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid>("UserId")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("Id");
+                b.HasKey("Id");
 
-                    b.HasIndex("FavoriteId");
+                b.HasIndex("FavoriteId");
 
-                    b.HasIndex("OrderId");
+                b.HasIndex("OrderId");
 
-                    b.HasIndex("ProductId");
+                b.HasIndex("ProductId");
 
-                    b.HasIndex("UserId");
+                b.HasIndex("UserId");
 
-                    b.ToTable("Notifications");
-                });
+                b.ToTable("Notifications");
+            });
 
             modelBuilder.Entity("E_Ticaret.Domain.Entities.Order", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+            {
+                b.Property<Guid>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime?>("CreatedAt")
-                        .HasColumnType("datetime2");
+                b.Property<DateTime?>("CreatedAt")
+                    .HasColumnType("datetime2");
 
-                    b.Property<Guid?>("CreatedUser")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid?>("CreatedUser")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("datetime2");
+                b.Property<DateTime?>("UpdatedAt")
+                    .HasColumnType("datetime2");
 
-                    b.Property<Guid?>("UpdatedUser")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid?>("UpdatedUser")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid>("UserId")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("Id");
+                b.HasKey("Id");
 
-                    b.HasIndex("UserId");
+                b.HasIndex("UserId");
 
-                    b.ToTable("Orders", (string)null);
-                });
+                b.ToTable("Orders", (string)null);
+            });
 
             modelBuilder.Entity("E_Ticaret.Domain.Entities.OrderProduct", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+            {
+                b.Property<Guid>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime?>("CreatedAt")
-                        .HasColumnType("datetime2");
+                b.Property<DateTime?>("CreatedAt")
+                    .HasColumnType("datetime2");
 
-                    b.Property<Guid?>("CreatedUser")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid?>("CreatedUser")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("OrderId")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid>("OrderId")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("ProductId")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid>("ProductId")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("datetime2");
+                b.Property<DateTime?>("UpdatedAt")
+                    .HasColumnType("datetime2");
 
-                    b.Property<Guid?>("UpdatedUser")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid?>("UpdatedUser")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("Id");
+                b.HasKey("Id");
 
-                    b.HasIndex("OrderId");
+                b.HasIndex("OrderId");
 
-                    b.HasIndex("ProductId");
+                b.HasIndex("ProductId");
 
-                    b.ToTable("OrderProducts", (string)null);
-                });
+                b.ToTable("OrderProducts", (string)null);
+            });
 
             modelBuilder.Entity("E_Ticaret.Domain.Entities.Product", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+            {
+                b.Property<Guid>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("CategoryId")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid>("CategoryId")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime?>("CreatedAt")
-                        .HasColumnType("datetime2");
+                b.Property<DateTime?>("CreatedAt")
+                    .HasColumnType("datetime2");
 
-                    b.Property<Guid?>("CreatedUser")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid?>("CreatedUser")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                b.Property<string>("Name")
+                    .IsRequired()
+                    .HasMaxLength(100)
+                    .HasColumnType("nvarchar(100)");
 
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("datetime2");
+                b.Property<DateTime?>("UpdatedAt")
+                    .HasColumnType("datetime2");
 
-                    b.Property<Guid?>("UpdatedUser")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid?>("UpdatedUser")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid>("UserId")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("Id");
+                b.HasKey("Id");
 
-                    b.HasIndex("CategoryId");
+                b.HasIndex("CategoryId");
 
-                    b.HasIndex("UserId");
+                b.HasIndex("UserId");
 
-                    b.ToTable("Products");
-                });
+                b.ToTable("Products");
+            });
 
             modelBuilder.Entity("E_Ticaret.Domain.Entities.Review", b =>
-                {
-                    b.Property<Guid>("ProductId")
-                        .HasColumnType("uniqueidentifier");
+            {
+                b.Property<Guid>("ProductId")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid>("UserId")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Comment")
-                        .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                b.Property<string>("Comment")
+                    .IsRequired()
+                    .HasMaxLength(500)
+                    .HasColumnType("nvarchar(500)");
 
-                    b.Property<DateTime?>("CreatedAt")
-                        .HasColumnType("datetime2");
+                b.Property<DateTime?>("CreatedAt")
+                    .HasColumnType("datetime2");
 
-                    b.Property<Guid?>("CreatedUser")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid?>("CreatedUser")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("Id")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid>("Id")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("Rating")
-                        .HasColumnType("int");
+                b.Property<int>("Rating")
+                    .HasColumnType("int");
 
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("datetime2");
+                b.Property<DateTime?>("UpdatedAt")
+                    .HasColumnType("datetime2");
 
-                    b.Property<Guid?>("UpdatedUser")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid?>("UpdatedUser")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("ProductId", "UserId");
+                b.HasKey("ProductId", "UserId");
 
-                    b.HasIndex("UserId");
+                b.HasIndex("UserId");
 
-                    b.ToTable("Reviews");
-                });
+                b.ToTable("Reviews");
+            });
 
             modelBuilder.Entity("E_Ticaret.Domain.Entities.User", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+            {
+                b.Property<Guid>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime?>("CreatedAt")
-                        .HasColumnType("datetime2");
+                b.Property<DateTime?>("CreatedAt")
+                    .HasColumnType("datetime2");
 
-                    b.Property<Guid?>("CreatedUser")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid?>("CreatedUser")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                b.Property<string>("Name")
+                    .IsRequired()
+                    .HasMaxLength(100)
+                    .HasColumnType("nvarchar(100)");
 
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("datetime2");
+                b.Property<DateTime?>("UpdatedAt")
+                    .HasColumnType("datetime2");
 
-                    b.Property<Guid?>("UpdatedUser")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<Guid?>("UpdatedUser")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("Id");
+                b.HasKey("Id");
 
-                    b.ToTable("Users");
-                });
+                b.ToTable("Users");
+            });
 
             modelBuilder.Entity("E_Ticaret.Domain.Entities.Favorite", b =>
-                {
-                    b.HasOne("E_Ticaret.Domain.Entities.Product", "Product")
-                        .WithMany("Favorites")
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+            {
+                b.HasOne("E_Ticaret.Domain.Entities.Product", "Product")
+                    .WithMany("Favorites")
+                    .HasForeignKey("ProductId")
+                    .OnDelete(DeleteBehavior.Restrict)
+                    .IsRequired();
 
-                    b.HasOne("E_Ticaret.Domain.Entities.User", "User")
-                        .WithMany("Favorites")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                b.HasOne("E_Ticaret.Domain.Entities.User", "User")
+                    .WithMany("Favorites")
+                    .HasForeignKey("UserId")
+                    .OnDelete(DeleteBehavior.Restrict)
+                    .IsRequired();
 
-                    b.Navigation("Product");
+                b.Navigation("Product");
 
-                    b.Navigation("User");
-                });
+                b.Navigation("User");
+            });
 
             modelBuilder.Entity("E_Ticaret.Domain.Entities.Image", b =>
-                {
-                    b.HasOne("E_Ticaret.Domain.Entities.Product", "Product")
-                        .WithMany("Images")
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+            {
+                b.HasOne("E_Ticaret.Domain.Entities.Product", "Product")
+                    .WithMany("Images")
+                    .HasForeignKey("ProductId")
+                    .OnDelete(DeleteBehavior.Restrict)
+                    .IsRequired();
 
-                    b.Navigation("Product");
-                });
+                b.Navigation("Product");
+            });
 
             modelBuilder.Entity("E_Ticaret.Domain.Entities.Notification", b =>
-                {
-                    b.HasOne("E_Ticaret.Domain.Entities.Favorite", "Favorite")
-                        .WithMany()
-                        .HasForeignKey("FavoriteId")
-                        .OnDelete(DeleteBehavior.Restrict);
+            {
+                b.HasOne("E_Ticaret.Domain.Entities.Favorite", "Favorite")
+                    .WithMany()
+                    .HasForeignKey("FavoriteId")
+                    .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("E_Ticaret.Domain.Entities.Order", "Order")
-                        .WithMany()
-                        .HasForeignKey("OrderId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                b.HasOne("E_Ticaret.Domain.Entities.Order", "Order")
+                    .WithMany()
+                    .HasForeignKey("OrderId")
+                    .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("E_Ticaret.Domain.Entities.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                b.HasOne("E_Ticaret.Domain.Entities.Product", "Product")
+                    .WithMany()
+                    .HasForeignKey("ProductId")
+                    .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("E_Ticaret.Domain.Entities.User", "User")
-                        .WithMany("Notifications")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                b.HasOne("E_Ticaret.Domain.Entities.User", "User")
+                    .WithMany("Notifications")
+                    .HasForeignKey("UserId")
+                    .OnDelete(DeleteBehavior.Restrict)
+                    .IsRequired();
 
-                    b.Navigation("Favorite");
+                b.Navigation("Favorite");
 
-                    b.Navigation("Order");
+                b.Navigation("Order");
 
-                    b.Navigation("Product");
+                b.Navigation("Product");
 
-                    b.Navigation("User");
-                });
+                b.Navigation("User");
+            });
 
             modelBuilder.Entity("E_Ticaret.Domain.Entities.Order", b =>
-                {
-                    b.HasOne("E_Ticaret.Domain.Entities.User", "User")
-                        .WithMany("Orders")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+            {
+                b.HasOne("E_Ticaret.Domain.Entities.User", "User")
+                    .WithMany("Orders")
+                    .HasForeignKey("UserId")
+                    .OnDelete(DeleteBehavior.Restrict)
+                    .IsRequired();
 
-                    b.Navigation("User");
-                });
+                b.Navigation("User");
+            });
 
             modelBuilder.Entity("E_Ticaret.Domain.Entities.OrderProduct", b =>
-                {
-                    b.HasOne("E_Ticaret.Domain.Entities.Order", "Order")
-                        .WithMany("OrderProducts")
-                        .HasForeignKey("OrderId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+            {
+                b.HasOne("E_Ticaret.Domain.Entities.Order", "Order")
+                    .WithMany("OrderProducts")
+                    .HasForeignKey("OrderId")
+                    .OnDelete(DeleteBehavior.Restrict)
+                    .IsRequired();
 
-                    b.HasOne("E_Ticaret.Domain.Entities.Product", "Product")
-                        .WithMany("OrderProducts")
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                b.HasOne("E_Ticaret.Domain.Entities.Product", "Product")
+                    .WithMany("OrderProducts")
+                    .HasForeignKey("ProductId")
+                    .OnDelete(DeleteBehavior.Restrict)
+                    .IsRequired();
 
-                    b.Navigation("Order");
+                b.Navigation("Order");
 
-                    b.Navigation("Product");
-                });
+                b.Navigation("Product");
+            });
 
             modelBuilder.Entity("E_Ticaret.Domain.Entities.Product", b =>
-                {
-                    b.HasOne("E_Ticaret.Domain.Entities.Category", "Category")
-                        .WithMany("Products")
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+            {
+                b.HasOne("E_Ticaret.Domain.Entities.Category", "Category")
+                    .WithMany("Products")
+                    .HasForeignKey("CategoryId")
+                    .OnDelete(DeleteBehavior.Restrict)
+                    .IsRequired();
 
-                    b.HasOne("E_Ticaret.Domain.Entities.User", "User")
-                        .WithMany("Products")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                b.HasOne("E_Ticaret.Domain.Entities.User", "User")
+                    .WithMany("Products")
+                    .HasForeignKey("UserId")
+                    .OnDelete(DeleteBehavior.Restrict)
+                    .IsRequired();
 
-                    b.Navigation("Category");
+                b.Navigation("Category");
 
-                    b.Navigation("User");
-                });
+                b.Navigation("User");
+            });
 
             modelBuilder.Entity("E_Ticaret.Domain.Entities.Review", b =>
-                {
-                    b.HasOne("E_Ticaret.Domain.Entities.Product", "Product")
-                        .WithMany("Reviews")
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+            {
+                b.HasOne("E_Ticaret.Domain.Entities.Product", "Product")
+                    .WithMany("Reviews")
+                    .HasForeignKey("ProductId")
+                    .OnDelete(DeleteBehavior.Restrict)
+                    .IsRequired();
 
-                    b.HasOne("E_Ticaret.Domain.Entities.User", "User")
-                        .WithMany("Reviews")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                b.HasOne("E_Ticaret.Domain.Entities.User", "User")
+                    .WithMany("Reviews")
+                    .HasForeignKey("UserId")
+                    .OnDelete(DeleteBehavior.Restrict)
+                    .IsRequired();
 
-                    b.Navigation("Product");
+                b.Navigation("Product");
 
-                    b.Navigation("User");
-                });
+                b.Navigation("User");
+            });
 
             modelBuilder.Entity("E_Ticaret.Domain.Entities.Category", b =>
-                {
-                    b.Navigation("Products");
-                });
+            {
+                b.Navigation("Products");
+            });
 
             modelBuilder.Entity("E_Ticaret.Domain.Entities.Order", b =>
-                {
-                    b.Navigation("OrderProducts");
-                });
+            {
+                b.Navigation("OrderProducts");
+            });
 
             modelBuilder.Entity("E_Ticaret.Domain.Entities.Product", b =>
-                {
-                    b.Navigation("Favorites");
+            {
+                b.Navigation("Favorites");
 
-                    b.Navigation("Images");
+                b.Navigation("Images");
 
-                    b.Navigation("OrderProducts");
+                b.Navigation("OrderProducts");
 
-                    b.Navigation("Reviews");
-                });
+                b.Navigation("Reviews");
+            });
 
             modelBuilder.Entity("E_Ticaret.Domain.Entities.User", b =>
-                {
-                    b.Navigation("Favorites");
+            {
+                b.Navigation("Favorites");
 
-                    b.Navigation("Notifications");
+                b.Navigation("Notifications");
 
-                    b.Navigation("Orders");
+                b.Navigation("Orders");
 
-                    b.Navigation("Products");
+                b.Navigation("Products");
 
-                    b.Navigation("Reviews");
-                });
+                b.Navigation("Reviews");
+            });
 #pragma warning restore 612, 618
         }
     }

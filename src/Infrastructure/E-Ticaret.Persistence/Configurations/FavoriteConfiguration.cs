@@ -14,7 +14,7 @@ public class FavoriteConfiguration : IEntityTypeConfiguration<Favorite>
             .HasOne(f => f.User)
             .WithMany(u => u.Favorites)
             .HasForeignKey(f => f.UserId)
-            .OnDelete(DeleteBehavior.Restrict); 
+            .OnDelete(DeleteBehavior.Restrict);
 
         builder
             .HasOne(f => f.Product)
