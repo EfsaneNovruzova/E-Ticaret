@@ -9,17 +9,17 @@ public class OrderProductConfiguration : IEntityTypeConfiguration<OrderProduct>
     {
         builder.ToTable("OrderProducts");
 
-        builder.HasKey(op => op.Id); 
+        builder.HasKey(op => op.Id);
 
-        
+
         builder.HasOne(op => op.Order)
                .WithMany(o => o.OrderProducts)
                .HasForeignKey(op => op.OrderId)
-               .OnDelete(DeleteBehavior.Restrict); 
-        
+               .OnDelete(DeleteBehavior.Restrict);
+
         builder.HasOne(op => op.Product)
                .WithMany(p => p.OrderProducts)
                .HasForeignKey(op => op.ProductId)
-               .OnDelete(DeleteBehavior.Restrict); 
+               .OnDelete(DeleteBehavior.Restrict);
     }
 }

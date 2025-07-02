@@ -37,6 +37,6 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
         builder.HasMany(u => u.Reviews)
                .WithOne(r => r.User)
                .HasForeignKey(r => r.UserId)
-               .OnDelete(DeleteBehavior.Restrict); 
+               .OnDelete(DeleteBehavior.Restrict);
     }
 }

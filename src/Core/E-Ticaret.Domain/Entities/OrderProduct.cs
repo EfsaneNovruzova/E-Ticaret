@@ -1,6 +1,6 @@
 ﻿namespace E_Ticaret.Domain.Entities;
 
-public class OrderProduct:BaseEntity
+public class OrderProduct : BaseEntity
 {
     public Guid Id { get; set; }
 

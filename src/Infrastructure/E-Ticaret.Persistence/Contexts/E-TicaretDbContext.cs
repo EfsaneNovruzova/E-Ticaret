@@ -28,7 +28,6 @@ public class E_TicaretDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        // Bu sətir avtomatik olaraq E_Ticaret.Persistence.Configurations namespace-dək bütün IEntityTypeConfiguration implementasiyalarını tapıb tətbiq edəcək
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(FavoriteConfiguration).Assembly);
     }
 }
